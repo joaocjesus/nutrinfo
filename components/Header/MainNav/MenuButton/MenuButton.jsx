@@ -68,11 +68,14 @@ const MenuButton = ({ menu, disabled, classes }) => {
         aria-haspopup="true"
         onClick={handleToggle}
         className={classes.name}
-        disabled={disabled}
+      // disabled={disabled}
       >
         {name}
         {options && (
-          <span className={classes.icon} onClick={(e) => handleToggle(e, true)}>
+          <span
+            className={classes.icon}
+            onClick={(e) => handleToggle(e, true)}
+          >
             {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </span>
         )}

@@ -41,7 +41,7 @@ const menus = [
       { label: 'Contributors Status...', link: '/admin/contributors-status' },
       { label: 'User Management...', link: '/admin/admin-panel' },
     ],
-    restrict: true,
+    // restrict: true,
   },
 ];
 
@@ -51,7 +51,7 @@ const MainNav = ({ classes }) => {
   const { promiseInProgress: loadingUser } = usePromiseTracker({ area: 'getUser' });
 
   useEffect(() => {
-    setDisabled(!userDetails || !userDetails.email);
+    setDisabled(!userDetails?.email);
   }, [userDetails]);
 
   const RightNavContent = () => {
